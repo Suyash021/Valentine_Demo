@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>For My Beloved Rekha ❤️</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
@@ -17,30 +17,32 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
             min-height: 100vh;
-            padding: 20px;
+            padding: 10px;
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 10px;
         }
         
         /* Header */
         .header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 10px;
         }
         
         h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 5rem;
+            font-size: clamp(2.5rem, 8vw, 5rem);
             background: linear-gradient(45deg, #ff0844, #ff4567, #ff6b81);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             animation: glow 2s ease-in-out infinite;
+            line-height: 1.2;
+            word-break: break-word;
         }
         
         @keyframes glow {
@@ -49,10 +51,10 @@
         }
         
         .hearts {
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
             color: #ff4567;
-            letter-spacing: 20px;
-            margin: 20px 0;
+            letter-spacing: 10px;
+            margin: 10px 0;
             animation: heartbeat 1.5s ease-in-out infinite;
         }
         
@@ -64,9 +66,9 @@
         /* Love Letter Card */
         .letter-card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 50px;
-            padding: 50px;
-            margin: 40px 0;
+            border-radius: 30px;
+            padding: 25px;
+            margin: 20px 0;
             box-shadow: 0 20px 60px rgba(255, 68, 132, 0.3);
             border: 3px solid white;
             position: relative;
@@ -76,9 +78,9 @@
         .letter-card::before {
             content: "❤️";
             position: absolute;
-            top: -30px;
-            left: -30px;
-            font-size: 150px;
+            top: -20px;
+            left: -20px;
+            font-size: 100px;
             opacity: 0.1;
             transform: rotate(-15deg);
         }
@@ -86,75 +88,76 @@
         .letter-card::after {
             content: "❤️";
             position: absolute;
-            bottom: -30px;
-            right: -30px;
-            font-size: 150px;
+            bottom: -20px;
+            right: -20px;
+            font-size: 100px;
             opacity: 0.1;
             transform: rotate(15deg);
         }
         
         .greeting {
             font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw, 3rem);
             color: #ff4567;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .message {
             font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 4vw, 1.3rem);
             color: #4a4a4a;
-            line-height: 2;
+            line-height: 1.8;
             text-align: center;
             white-space: pre-line;
             background: rgba(255, 240, 245, 0.5);
-            padding: 40px;
-            border-radius: 40px;
-            margin: 30px 0;
+            padding: 20px;
+            border-radius: 30px;
+            margin: 20px 0;
         }
         
         .signature {
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             color: #ff4567;
             text-align: right;
-            margin-top: 30px;
+            margin-top: 20px;
         }
         
         /* Photo Section */
         .photo-section {
-            margin: 60px 0;
+            margin: 30px 0;
         }
         
         .section-title {
             text-align: center;
             font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw, 3rem);
             color: white;
             text-shadow: 2px 2px 4px rgba(255, 68, 132, 0.5);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         
         .photo-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            padding: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 10px;
         }
         
         .photo-card {
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 40px;
-            padding: 25px;
+            border-radius: 30px;
+            padding: 15px;
             box-shadow: 0 15px 40px rgba(255, 68, 132, 0.2);
             border: 3px solid white;
             transition: all 0.3s ease;
             text-align: center;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .photo-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-5px);
             box-shadow: 0 25px 50px rgba(255, 68, 132, 0.4);
         }
         
@@ -162,17 +165,18 @@
             width: 100%;
             aspect-ratio: 1;
             background: linear-gradient(135deg, #ffe6e9, #ffd4db);
-            border-radius: 30px;
+            border-radius: 25px;
             overflow: hidden;
             border: 4px solid white;
             box-shadow: inset 0 0 20px rgba(255, 68, 132, 0.2);
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         
         .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            display: block;
         }
         
         .photo-placeholder {
@@ -186,60 +190,75 @@
         }
         
         .placeholder-icon {
-            font-size: 4rem;
+            font-size: clamp(2rem, 8vw, 4rem);
             color: #ff4567;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         
         .placeholder-text {
-            font-size: 1.1rem;
+            font-size: clamp(0.8rem, 3vw, 1.1rem);
             color: #ff6b81;
+            text-align: center;
+            padding: 0 5px;
         }
         
         .photo-label {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 4vw, 1.3rem);
             color: #ff4567;
             font-weight: 600;
-            margin: 10px 0 5px;
+            margin: 8px 0 3px;
         }
         
         .photo-sub {
             color: #888;
-            font-size: 0.95rem;
+            font-size: clamp(0.8rem, 3vw, 0.95rem);
         }
         
-        /* Upload Section */
+        /* Upload Section - Will be hidden when photos are added */
         .upload-section {
             background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(10px);
-            border-radius: 60px;
-            padding: 40px;
-            margin: 40px 0;
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 25px;
+            margin: 20px 0;
             border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.5s ease;
+        }
+        
+        .upload-section.hidden {
+            display: none;
         }
         
         .upload-title {
             text-align: center;
             font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             color: white;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
         
         .upload-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        
+        @media (min-width: 600px) {
+            .upload-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
         }
         
         .upload-box {
             background: white;
-            border-radius: 30px;
-            padding: 20px;
+            border-radius: 20px;
+            padding: 15px;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s ease;
             border: 3px solid white;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .upload-box:hover {
@@ -247,20 +266,25 @@
             border-color: #ff4567;
         }
         
+        .upload-box:active {
+            transform: scale(0.95);
+        }
+        
         .upload-icon {
-            font-size: 2.5rem;
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
             color: #ff4567;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         
         .upload-label {
             font-weight: 600;
             color: #ff4567;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
+            font-size: clamp(0.8rem, 3vw, 1rem);
         }
         
         .upload-hint {
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 2.5vw, 0.8rem);
             color: #888;
         }
         
@@ -274,16 +298,19 @@
             background: linear-gradient(45deg, #ff6b81, #ff4567);
             color: white;
             border: none;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border-radius: 60px;
+            padding: 12px 30px;
+            font-size: clamp(1rem, 4vw, 1.2rem);
+            border-radius: 50px;
             cursor: pointer;
-            margin: 30px auto;
+            margin: 15px auto;
             display: block;
             border: 2px solid white;
             box-shadow: 0 10px 30px rgba(255, 68, 132, 0.3);
             transition: all 0.3s ease;
             font-weight: 600;
+            width: fit-content;
+            min-width: 200px;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .save-btn:hover {
@@ -291,44 +318,136 @@
             box-shadow: 0 15px 40px rgba(255, 68, 132, 0.5);
         }
         
+        .save-btn:active {
+            transform: translateY(0);
+        }
+        
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin: 20px 0;
+        }
+        
+        @media (min-width: 600px) {
+            .button-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
         /* Footer */
         .footer {
             text-align: center;
-            padding: 40px;
+            padding: 30px 10px;
             color: white;
             font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 5vw, 2rem);
             text-shadow: 2px 2px 4px rgba(255, 68, 132, 0.5);
-        }
-        
-        /* Responsive */
-        @media (max-width: 900px) {
-            h1 { font-size: 3.5rem; }
-            .photo-grid { grid-template-columns: 1fr; }
-            .upload-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        
-        @media (max-width: 600px) {
-            h1 { font-size: 2.5rem; }
-            .hearts { letter-spacing: 10px; }
-            .upload-grid { grid-template-columns: 1fr; }
         }
         
         /* Success message */
         .success-message {
             background: linear-gradient(45deg, #ff6b81, #ff4567);
             color: white;
-            padding: 20px;
-            border-radius: 60px;
+            padding: 15px;
+            border-radius: 50px;
             text-align: center;
-            font-size: 1.2rem;
-            margin: 20px 0;
+            font-size: clamp(0.9rem, 4vw, 1.2rem);
+            margin: 15px 0;
             animation: slideIn 0.5s ease;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 400px;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
         
         @keyframes slideIn {
-            from { transform: translateY(-100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            from { transform: translate(-50%, -100px); opacity: 0; }
+            to { transform: translate(-50%, 0); opacity: 1; }
+        }
+        
+        /* Mobile touch optimizations */
+        .photo-card {
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        .photo-card:active {
+            opacity: 0.8;
+        }
+        
+        /* Hide upload section when all photos are added */
+        .upload-section.hidden {
+            display: none;
+        }
+        
+        /* Show upload section */
+        .upload-section.visible {
+            display: block;
+        }
+        
+        /* Add photo indicator */
+        .photo-added-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4567;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            border: 2px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        /* Remove button for photos */
+        .remove-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #ff4567;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 3px solid white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 20;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .photo-card:hover .remove-btn {
+            opacity: 1;
+        }
+        
+        @media (max-width: 600px) {
+            .remove-btn {
+                opacity: 0.8;
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
         }
     </style>
 </head>
@@ -371,46 +490,60 @@
             
             <div class="photo-grid" id="photoGallery">
                 <!-- Photo 1 -->
-                <div class="photo-card">
-                    <div class="photo-frame" id="frame1">
-                        <div class="photo-placeholder">
-                            <div class="placeholder-icon">📸</div>
-                            <div class="placeholder-text">Your photo here</div>
+                <div class="photo-card" id="card1">
+                    <div style="position: relative;">
+                        <div class="photo-frame" id="frame1">
+                            <div class="photo-placeholder">
+                                <div class="placeholder-icon">📸</div>
+                                <div class="placeholder-text">Tap to add photo</div>
+                            </div>
                         </div>
+                        <span class="remove-btn" id="remove1" onclick="removePhoto(1, event)" style="display: none;">✕</span>
                     </div>
                     <div class="photo-label">Our First Date</div>
                     <div class="photo-sub">The day it all began ✨</div>
                 </div>
                 
                 <!-- Photo 2 -->
-                <div class="photo-card">
-                    <div class="photo-frame" id="frame2">
-                        <div class="photo-placeholder">
-                            <div class="placeholder-icon">📸</div>
-                            <div class="placeholder-text">Your photo here</div>
+                <div class="photo-card" id="card2">
+                    <div style="position: relative;">
+                        <div class="photo-frame" id="frame2">
+                            <div class="photo-placeholder">
+                                <div class="placeholder-icon">😍</div>
+                                <div class="placeholder-text">Tap to add photo</div>
+                            </div>
                         </div>
+                        <span class="remove-btn" id="remove2" onclick="removePhoto(2, event)" style="display: none;">✕</span>
                     </div>
                     <div class="photo-label">Favourite Picture</div>
-                    <div class="photo-sub">When I Fell too hard for you</div>
+                    <div class="photo-sub">When I fell too hard for you 💕</div>
                 </div>
                 
                 <!-- Photo 3 -->
-                <div class="photo-card">
-                    <div class="photo-frame" id="frame3">
-                        <div class="photo-placeholder">
-                            <div class="placeholder-icon">📸</div>
+                <div class="photo-card" id="card3">
+                    <div style="position: relative;">
+                        <div class="photo-frame" id="frame3">
+                            <div class="photo-placeholder">
+                                <div class="placeholder-icon">🌸</div>
+                                <div class="placeholder-text">Tap to add photo</div>
+                            </div>
                         </div>
+                        <span class="remove-btn" id="remove3" onclick="removePhoto(3, event)" style="display: none;">✕</span>
                     </div>
                     <div class="photo-label">Our Favorite Moment</div>
                     <div class="photo-sub">Just us being happy together 🌸</div>
                 </div>
                 
                 <!-- Photo 4 -->
-                <div class="photo-card">
-                    <div class="photo-frame" id="frame4">
-                        <div class="photo-placeholder">
-                            <div class="placeholder-icon">📸</div>
+                <div class="photo-card" id="card4">
+                    <div style="position: relative;">
+                        <div class="photo-frame" id="frame4">
+                            <div class="photo-placeholder">
+                                <div class="placeholder-icon">💕</div>
+                                <div class="placeholder-text">Tap to add photo</div>
+                            </div>
                         </div>
+                        <span class="remove-btn" id="remove4" onclick="removePhoto(4, event)" style="display: none;">✕</span>
                     </div>
                     <div class="photo-label">Recent Memory</div>
                     <div class="photo-sub">Making new memories with you 💕</div>
@@ -419,7 +552,7 @@
         </div>
         
         <!-- Upload Section -->
-        <div class="upload-section">
+        <div class="upload-section" id="uploadSection">
             <h3 class="upload-title">📸 Add Your Photos</h3>
             
             <div class="upload-grid">
@@ -427,15 +560,15 @@
                 <div class="upload-box" onclick="document.getElementById('file1').click()">
                     <div class="upload-icon">📸</div>
                     <div class="upload-label">First Date</div>
-                    <div class="upload-hint">Click to upload</div>
+                    <div class="upload-hint">Tap to upload</div>
                 </div>
                 <input type="file" id="file1" class="file-input" accept="image/*" onchange="uploadPhoto(1, this)">
                 
                 <!-- Upload Box 2 -->
                 <div class="upload-box" onclick="document.getElementById('file2').click()">
                     <div class="upload-icon">😍</div>
-                    <div class="upload-label">My Favourite Pic</div>
-                    <div class="upload-hint">Click to upload</div>
+                    <div class="upload-label">My Favourite</div>
+                    <div class="upload-hint">Tap to upload</div>
                 </div>
                 <input type="file" id="file2" class="file-input" accept="image/*" onchange="uploadPhoto(2, this)">
                 
@@ -443,7 +576,7 @@
                 <div class="upload-box" onclick="document.getElementById('file3').click()">
                     <div class="upload-icon">🌸</div>
                     <div class="upload-label">Favorite Moment</div>
-                    <div class="upload-hint">Click to upload</div>
+                    <div class="upload-hint">Tap to upload</div>
                 </div>
                 <input type="file" id="file3" class="file-input" accept="image/*" onchange="uploadPhoto(3, this)">
                 
@@ -451,13 +584,15 @@
                 <div class="upload-box" onclick="document.getElementById('file4').click()">
                     <div class="upload-icon">💕</div>
                     <div class="upload-label">Recent Memory</div>
-                    <div class="upload-hint">Click to upload</div>
+                    <div class="upload-hint">Tap to upload</div>
                 </div>
                 <input type="file" id="file4" class="file-input" accept="image/*" onchange="uploadPhoto(4, this)">
             </div>
             
-            <button class="save-btn" onclick="saveToLocalStorage()">💾 Save All Photos</button>
-            <button class="save-btn" onclick="loadFromLocalStorage()" style="background: linear-gradient(45deg, #ff4567, #ff6b81);">📂 Load Saved Photos</button>
+            <div class="button-group">
+                <button class="save-btn" onclick="saveToLocalStorage()">💾 Save All Photos</button>
+                <button class="save-btn" onclick="loadFromLocalStorage()" style="background: linear-gradient(45deg, #ff4567, #ff6b81);">📂 Load Saved Photos</button>
+            </div>
         </div>
         
         <!-- Success Message Area -->
@@ -483,6 +618,7 @@
         // Load saved photos on page load
         window.onload = function() {
             loadFromLocalStorage();
+            checkAllPhotosAdded();
         };
         
         // Upload photo function
@@ -498,8 +634,14 @@
                     // Save to variable
                     photos[photoNumber] = e.target.result;
                     
+                    // Show remove button
+                    document.getElementById(`remove${photoNumber}`).style.display = 'flex';
+                    
                     // Show success
-                    showMessage(`Photo ${photoNumber} uploaded! ✨`);
+                    showMessage(`✨ Photo added successfully!`);
+                    
+                    // Check if all photos are added
+                    checkAllPhotosAdded();
                 };
                 
                 reader.readAsDataURL(file);
@@ -520,6 +662,46 @@
             // Clear frame and add image
             frame.innerHTML = '';
             frame.appendChild(img);
+            
+            // Show remove button
+            document.getElementById(`remove${photoNumber}`).style.display = 'flex';
+        }
+        
+        // Remove photo
+        function removePhoto(photoNumber, event) {
+            if (event) {
+                event.stopPropagation();
+            }
+            
+            const frame = document.getElementById(`frame${photoNumber}`);
+            const removeBtn = document.getElementById(`remove${photoNumber}`);
+            
+            // Reset to placeholder with appropriate icon
+            let icon = '📸';
+            let text = 'Tap to add photo';
+            
+            if (photoNumber === 2) icon = '😍';
+            else if (photoNumber === 3) icon = '🌸';
+            else if (photoNumber === 4) icon = '💕';
+            
+            frame.innerHTML = `
+                <div class="photo-placeholder">
+                    <div class="placeholder-icon">${icon}</div>
+                    <div class="placeholder-text">${text}</div>
+                </div>
+            `;
+            
+            // Hide remove button
+            removeBtn.style.display = 'none';
+            
+            // Remove from storage
+            photos[photoNumber] = null;
+            localStorage.removeItem(`rekha_photo_${photoNumber}`);
+            
+            showMessage(`Photo removed`);
+            
+            // Check if we need to show upload section again
+            checkAllPhotosAdded();
         }
         
         // Save to localStorage
@@ -555,28 +737,21 @@
             
             if (loadedCount > 0) {
                 showMessage(`📂 Loaded ${loadedCount} saved photos!`);
-            } else {
-                showMessage('No saved photos found. Upload some photos first!');
             }
+            
+            checkAllPhotosAdded();
         }
         
-        // Remove photo
-        function removePhoto(photoNumber) {
-            const frame = document.getElementById(`frame${photoNumber}`);
+        // Check if all photos are added
+        function checkAllPhotosAdded() {
+            const uploadSection = document.getElementById('uploadSection');
+            const allAdded = photos[1] && photos[2] && photos[3] && photos[4];
             
-            // Reset to placeholder
-            frame.innerHTML = `
-                <div class="photo-placeholder">
-                    <div class="placeholder-icon">📸</div>
-                    <div class="placeholder-text">Your photo here</div>
-                </div>
-            `;
-            
-            // Remove from storage
-            photos[photoNumber] = null;
-            localStorage.removeItem(`rekha_photo_${photoNumber}`);
-            
-            showMessage(`Photo ${photoNumber} removed`);
+            if (allAdded) {
+                uploadSection.classList.add('hidden');
+            } else {
+                uploadSection.classList.remove('hidden');
+            }
         }
         
         // Show success message
@@ -594,28 +769,34 @@
             }, 3000);
         }
         
-        // Add click handlers for photo cards to remove photos
+        // Make photo cards clickable for upload
         document.querySelectorAll('.photo-card').forEach((card, index) => {
-            card.addEventListener('dblclick', function() {
-                if (photos[index + 1]) {
-                    if (confirm('Remove this photo?')) {
-                        removePhoto(index + 1);
+            const photoNumber = index + 1;
+            
+            card.addEventListener('click', function(e) {
+                // Don't trigger if clicking remove button
+                if (e.target.classList.contains('remove-btn') || e.target.parentElement.classList.contains('remove-btn')) {
+                    return;
+                }
+                
+                // If photo exists, ask if want to replace
+                if (photos[photoNumber]) {
+                    if (confirm('Replace this photo?')) {
+                        document.getElementById(`file${photoNumber}`).click();
                     }
+                } else {
+                    // If no photo, open file picker
+                    document.getElementById(`file${photoNumber}`).click();
                 }
             });
         });
         
-        // Add tooltip
-        const style = document.createElement('style');
-        style.innerHTML = `
-            .photo-card {
-                cursor: pointer;
-            }
-            .photo-card:hover {
-                opacity: 0.9;
-            }
-        `;
-        document.head.appendChild(style);
+        // Prevent event bubbling on remove button
+        document.querySelectorAll('.remove-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        });
     </script>
 </body>
 </html>
