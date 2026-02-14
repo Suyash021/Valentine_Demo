@@ -315,8 +315,8 @@ html_content = """
                     </div>
                     <input type="file" id="file2" class="file-input" accept="image/*" onchange="uploadPhoto(event, 'img2', this)">
                     <img id="img2" style="display: none;">
-                    <div class="photo-label">Engagement Day</div>
-                    <div class="photo-sub">When I said "Yes" to forever 💍</div>
+                    <div class="photo-label">Best Picture</div>
+                    <div class="photo-sub">When I fell harder for you😘</div>
                 </div>
                 
                 <!-- Photo 3 -->
