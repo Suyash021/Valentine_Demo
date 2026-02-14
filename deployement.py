@@ -502,7 +502,8 @@ def main():
     st.components.v1.html(html_content, height=1800, scrolling=True)
     
     # Add some Streamlit metrics at the bottom
-    col2, col3 = st.columns(3)
+    
+    col2, col3 = st.columns(2)
     with col2:
         st.metric("Years Together", "2.5", "And counting...")
     with col3:
