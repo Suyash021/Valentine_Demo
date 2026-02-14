@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Beloved Rekha ❤️</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,239 +14,338 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fff0f5 0%, #ffe4e9 100%);
-            color: #b13e6b;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+            min-height: 100vh;
+            padding: 20px;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         
         /* Header */
-        header {
+        .header {
             text-align: center;
-            padding: 40px 20px 20px;
+            padding: 40px 20px;
         }
         
         h1 {
-            font-size: 3.5rem;
-            color: #d44e7a;
-            margin-bottom: 10px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            background: linear-gradient(45deg, #ff0844, #ff4567, #ff6b81);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            animation: glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 10px rgba(255, 107, 129, 0.5)); }
+            50% { filter: drop-shadow(0 0 20px rgba(255, 68, 132, 0.8)); }
         }
         
         .hearts {
-            font-size: 2rem;
-            color: #f28b9f;
-            letter-spacing: 15px;
-            margin: 15px 0;
+            font-size: 2.5rem;
+            color: #ff4567;
+            letter-spacing: 20px;
+            margin: 20px 0;
+            animation: heartbeat 1.5s ease-in-out infinite;
         }
         
-        /* Letter Section */
-        .letter-section {
-            background: white;
-            border-radius: 30px;
-            padding: 40px;
-            margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(210, 77, 120, 0.15);
-            border: 2px solid #ffcdd6;
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        /* Love Letter Card */
+        .letter-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50px;
+            padding: 50px;
+            margin: 40px 0;
+            box-shadow: 0 20px 60px rgba(255, 68, 132, 0.3);
+            border: 3px solid white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .letter-card::before {
+            content: "❤️";
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            font-size: 150px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+        
+        .letter-card::after {
+            content: "❤️";
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            font-size: 150px;
+            opacity: 0.1;
+            transform: rotate(15deg);
         }
         
         .greeting {
-            font-size: 2rem;
-            color: #c4456e;
-            margin-bottom: 20px;
-            font-weight: 600;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #ff4567;
+            text-align: center;
+            margin-bottom: 30px;
         }
         
-        .letter-content {
-            font-size: 1.25rem;
-            color: #6d3b4f;
-            margin: 25px 0;
+        .message {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: #4a4a4a;
+            line-height: 2;
+            text-align: center;
             white-space: pre-line;
+            background: rgba(255, 240, 245, 0.5);
+            padding: 40px;
+            border-radius: 40px;
+            margin: 30px 0;
         }
         
         .signature {
-            font-size: 1.8rem;
-            color: #d44e7a;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff4567;
+            text-align: right;
             margin-top: 30px;
-            font-style: italic;
         }
         
-        /* Photos Section */
-        .photos-section {
-            margin: 40px 0;
+        /* Photo Section */
+        .photo-section {
+            margin: 60px 0;
         }
         
-        .photos-title {
+        .section-title {
             text-align: center;
-            font-size: 2.2rem;
-            color: #c4456e;
-            margin-bottom: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(255, 68, 132, 0.5);
+            margin-bottom: 40px;
         }
         
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            padding: 10px;
+            gap: 30px;
+            padding: 20px;
         }
         
         .photo-card {
-            background: white;
-            border-radius: 25px;
-            padding: 20px;
-            box-shadow: 0 8px 20px rgba(210, 77, 120, 0.1);
-            border: 2px solid #ffcdd6;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 40px;
+            padding: 25px;
+            box-shadow: 0 15px 40px rgba(255, 68, 132, 0.2);
+            border: 3px solid white;
+            transition: all 0.3s ease;
             text-align: center;
+        }
+        
+        .photo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(255, 68, 132, 0.4);
         }
         
         .photo-frame {
             width: 100%;
             aspect-ratio: 1;
-            background: #ffeef2;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 3px dashed #f28b9f;
-            margin-bottom: 15px;
+            background: linear-gradient(135deg, #ffe6e9, #ffd4db);
+            border-radius: 30px;
             overflow: hidden;
-            position: relative;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .photo-frame:hover {
-            background: #ffdee6;
-            border-color: #d44e7a;
+            border: 4px solid white;
+            box-shadow: inset 0 0 20px rgba(255, 68, 132, 0.2);
+            margin-bottom: 15px;
         }
         
         .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
         }
         
-        .upload-icon {
-            font-size: 3rem;
-            color: #f28b9f;
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #ffe6e9, #ffd4db);
+        }
+        
+        .placeholder-icon {
+            font-size: 4rem;
+            color: #ff4567;
             margin-bottom: 10px;
-            z-index: 1;
         }
         
-        .upload-text {
-            color: #b13e6b;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 5px 15px;
-            border-radius: 50px;
-            z-index: 1;
+        .placeholder-text {
+            font-size: 1.1rem;
+            color: #ff6b81;
         }
         
         .photo-label {
-            color: #b13e6b;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            color: #ff4567;
             font-weight: 600;
             margin: 10px 0 5px;
         }
         
         .photo-sub {
-            color: #d88ca0;
+            color: #888;
             font-size: 0.95rem;
         }
         
-        /* Hidden file input */
+        /* Upload Section */
+        .upload-section {
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .upload-title {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .upload-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .upload-box {
+            background: white;
+            border-radius: 30px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 3px solid white;
+        }
+        
+        .upload-box:hover {
+            transform: scale(1.05);
+            border-color: #ff4567;
+        }
+        
+        .upload-icon {
+            font-size: 2.5rem;
+            color: #ff4567;
+            margin-bottom: 10px;
+        }
+        
+        .upload-label {
+            font-weight: 600;
+            color: #ff4567;
+            margin-bottom: 5px;
+        }
+        
+        .upload-hint {
+            font-size: 0.8rem;
+            color: #888;
+        }
+        
+        /* Hidden file inputs */
         .file-input {
             display: none;
         }
         
-        /* Reset button */
-        .reset-btn {
-            background: #f28b9f;
+        /* Button */
+        .save-btn {
+            background: linear-gradient(45deg, #ff6b81, #ff4567);
             color: white;
             border: none;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            margin: 20px auto;
-            display: block;
-            transition: background 0.3s ease;
-            border: 2px solid #ffcdd6;
-        }
-        
-        .reset-btn:hover {
-            background: #d44e7a;
-        }
-        
-        /* Heart decoration */
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #b13e6b;
+            padding: 15px 40px;
             font-size: 1.2rem;
+            border-radius: 60px;
+            cursor: pointer;
+            margin: 30px auto;
+            display: block;
+            border: 2px solid white;
+            box-shadow: 0 10px 30px rgba(255, 68, 132, 0.3);
+            transition: all 0.3s ease;
+            font-weight: 600;
         }
         
-        .photo-added {
-            border: 3px solid #d44e7a;
-            background: #fff;
+        .save-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 68, 132, 0.5);
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(255, 68, 132, 0.5);
         }
         
         /* Responsive */
-        @media (max-width: 700px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .photo-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .letter-section {
-                padding: 30px 20px;
-            }
-            
-            .greeting {
-                font-size: 1.6rem;
-            }
+        @media (max-width: 900px) {
+            h1 { font-size: 3.5rem; }
+            .photo-grid { grid-template-columns: 1fr; }
+            .upload-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .hearts {
-                letter-spacing: 8px;
-            }
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .hearts { letter-spacing: 10px; }
+            .upload-grid { grid-template-columns: 1fr; }
+        }
+        
+        /* Success message */
+        .success-message {
+            background: linear-gradient(45deg, #ff6b81, #ff4567);
+            color: white;
+            padding: 20px;
+            border-radius: 60px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Header -->
-        <header>
+        <div class="header">
             <div class="hearts">❤️ ❤️ ❤️</div>
             <h1>For My Beloved Rekha</h1>
             <div class="hearts">❤️ ❤️ ❤️</div>
-        </header>
+        </div>
         
-        <!-- Letter Section -->
-        <div class="letter-section">
+        <!-- Love Letter -->
+        <div class="letter-card">
             <div class="greeting">My Dearest Rekha,</div>
             
-            <div class="letter-content">
+            <div class="message">
                 On this Valentine's Day, my heart is overflowing with love for you. 
                 
                 From the moment you came into my life, everything became more beautiful. Your smile lights up my darkest days, and your laughter is the sweetest music to my ears. 
@@ -264,194 +365,259 @@
             </div>
         </div>
         
-        <!-- Photos Section -->
-        <div class="photos-section">
-            <h2 class="photos-title">Our Beautiful Memories</h2>
-            <p style="text-align: center; margin-bottom: 20px; color: #b13e6b;">Click on any frame to add your photo 📸</p>
+        <!-- Photo Gallery -->
+        <div class="photo-section">
+            <h2 class="section-title">Our Beautiful Memories</h2>
             
-            <div class="photo-grid" id="photoGrid">
+            <div class="photo-grid" id="photoGallery">
                 <!-- Photo 1 -->
-                <div class="photo-card" id="card1">
-                    <div class="photo-frame" onclick="document.getElementById('file1').click()">
-                        <div class="upload-icon">📸</div>
-                        <div class="upload-text">Click to add photo</div>
+                <div class="photo-card">
+                    <div class="photo-frame" id="frame1">
+                        <div class="photo-placeholder">
+                            <div class="placeholder-icon">📸</div>
+                            <div class="placeholder-text">Your photo here</div>
+                        </div>
                     </div>
-                    <input type="file" id="file1" class="file-input" accept="image/*" onchange="uploadPhoto(event, 'img1', this)">
-                    <img id="img1" style="display: none;">
                     <div class="photo-label">Our First Date</div>
                     <div class="photo-sub">The day it all began ✨</div>
                 </div>
                 
                 <!-- Photo 2 -->
-                <div class="photo-card" id="card2">
-                    <div class="photo-frame" onclick="document.getElementById('file2').click()">
-                        <div class="upload-icon">📸</div>
-                        <div class="upload-text">Click to add photo</div>
+                <div class="photo-card">
+                    <div class="photo-frame" id="frame2">
+                        <div class="photo-placeholder">
+                            <div class="placeholder-icon">📸</div>
+                            <div class="placeholder-text">Your photo here</div>
+                        </div>
                     </div>
-                    <input type="file" id="file2" class="file-input" accept="image/*" onchange="uploadPhoto(event, 'img2', this)">
-                    <img id="img2" style="display: none;">
                     <div class="photo-label">Engagement Day</div>
                     <div class="photo-sub">When I said "Yes" to forever 💍</div>
                 </div>
                 
                 <!-- Photo 3 -->
-                <div class="photo-card" id="card3">
-                    <div class="photo-frame" onclick="document.getElementById('file3').click()">
-                        <div class="upload-icon">📸</div>
-                        <div class="upload-text">Click to add photo</div>
+                <div class="photo-card">
+                    <div class="photo-frame" id="frame3">
+                        <div class="photo-placeholder">
+                            <div class="placeholder-icon">📸</div>
+                            <div class="placeholder-text">Your photo here</div>
+                        </div>
                     </div>
-                    <input type="file" id="file3" class="file-input" accept="image/*" onchange="uploadPhoto(event, 'img3', this)">
-                    <img id="img3" style="display: none;">
                     <div class="photo-label">Our Favorite Moment</div>
                     <div class="photo-sub">Just us being happy together 🌸</div>
                 </div>
                 
                 <!-- Photo 4 -->
-                <div class="photo-card" id="card4">
-                    <div class="photo-frame" onclick="document.getElementById('file4').click()">
-                        <div class="upload-icon">📸</div>
-                        <div class="upload-text">Click to add photo</div>
+                <div class="photo-card">
+                    <div class="photo-frame" id="frame4">
+                        <div class="photo-placeholder">
+                            <div class="placeholder-icon">📸</div>
+                            <div class="placeholder-text">Your photo here</div>
+                        </div>
                     </div>
-                    <input type="file" id="file4" class="file-input" accept="image/*" onchange="uploadPhoto(event, 'img4', this)">
-                    <img id="img4" style="display: none;">
                     <div class="photo-label">Recent Memory</div>
                     <div class="photo-sub">Making new memories with you 💕</div>
                 </div>
             </div>
-            
-            <button class="reset-btn" onclick="resetAllPhotos()">Reset All Photos</button>
         </div>
         
-        <!-- Simple Footer -->
-        <footer>
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <h3 class="upload-title">📸 Add Your Photos</h3>
+            
+            <div class="upload-grid">
+                <!-- Upload Box 1 -->
+                <div class="upload-box" onclick="document.getElementById('file1').click()">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-label">First Date</div>
+                    <div class="upload-hint">Click to upload</div>
+                </div>
+                <input type="file" id="file1" class="file-input" accept="image/*" onchange="uploadPhoto(1, this)">
+                
+                <!-- Upload Box 2 -->
+                <div class="upload-box" onclick="document.getElementById('file2').click()">
+                    <div class="upload-icon">💍</div>
+                    <div class="upload-label">Engagement</div>
+                    <div class="upload-hint">Click to upload</div>
+                </div>
+                <input type="file" id="file2" class="file-input" accept="image/*" onchange="uploadPhoto(2, this)">
+                
+                <!-- Upload Box 3 -->
+                <div class="upload-box" onclick="document.getElementById('file3').click()">
+                    <div class="upload-icon">🌸</div>
+                    <div class="upload-label">Favorite Moment</div>
+                    <div class="upload-hint">Click to upload</div>
+                </div>
+                <input type="file" id="file3" class="file-input" accept="image/*" onchange="uploadPhoto(3, this)">
+                
+                <!-- Upload Box 4 -->
+                <div class="upload-box" onclick="document.getElementById('file4').click()">
+                    <div class="upload-icon">💕</div>
+                    <div class="upload-label">Recent Memory</div>
+                    <div class="upload-hint">Click to upload</div>
+                </div>
+                <input type="file" id="file4" class="file-input" accept="image/*" onchange="uploadPhoto(4, this)">
+            </div>
+            
+            <button class="save-btn" onclick="saveToLocalStorage()">💾 Save All Photos</button>
+            <button class="save-btn" onclick="loadFromLocalStorage()" style="background: linear-gradient(45deg, #ff4567, #ff6b81);">📂 Load Saved Photos</button>
+        </div>
+        
+        <!-- Success Message Area -->
+        <div id="successMessage"></div>
+        
+        <!-- Footer -->
+        <div class="footer">
             <p>Made with all my love, especially for you</p>
-            <p style="margin-top: 15px; font-size: 1.4rem;">14 February 2026</p>
-            <div style="margin-top: 20px; font-size: 1.8rem;">❤️</div>
-        </footer>
+            <p style="font-size: 1.5rem;">14 February 2026</p>
+            <p style="font-size: 2.5rem; margin-top: 20px;">❤️</p>
+        </div>
     </div>
 
     <script>
-        // Function to handle photo upload
-        function uploadPhoto(event, imgId, inputElement) {
-            const file = event.target.files[0];
+        // Store photos
+        let photos = {
+            1: localStorage.getItem('rekha_photo_1') || null,
+            2: localStorage.getItem('rekha_photo_2') || null,
+            3: localStorage.getItem('rekha_photo_3') || null,
+            4: localStorage.getItem('rekha_photo_4') || null
+        };
+        
+        // Load saved photos on page load
+        window.onload = function() {
+            loadFromLocalStorage();
+        };
+        
+        // Upload photo function
+        function uploadPhoto(photoNumber, input) {
+            const file = input.files[0];
             if (file) {
                 const reader = new FileReader();
                 
                 reader.onload = function(e) {
-                    // Get the photo frame (parent of the input's parent)
-                    const photoCard = inputElement.closest('.photo-card');
-                    const photoFrame = photoCard.querySelector('.photo-frame');
-                    const imgElement = photoCard.querySelector('#' + imgId);
+                    // Display photo
+                    displayPhoto(photoNumber, e.target.result);
                     
-                    // Set the image source and display it
-                    imgElement.src = e.target.result;
-                    imgElement.style.display = 'block';
+                    // Save to variable
+                    photos[photoNumber] = e.target.result;
                     
-                    // Clear the frame content and add the image
-                    photoFrame.innerHTML = '';
-                    photoFrame.appendChild(imgElement);
-                    
-                    // Add a class to show photo is added
-                    photoFrame.classList.add('photo-added');
-                    
-                    // Add a small remove button
-                    const removeBtn = document.createElement('span');
-                    removeBtn.innerHTML = '✕';
-                    removeBtn.style.position = 'absolute';
-                    removeBtn.style.top = '5px';
-                    removeBtn.style.right = '5px';
-                    removeBtn.style.background = '#d44e7a';
-                    removeBtn.style.color = 'white';
-                    removeBtn.style.width = '25px';
-                    removeBtn.style.height = '25px';
-                    removeBtn.style.borderRadius = '50%';
-                    removeBtn.style.display = 'flex';
-                    removeBtn.style.alignItems = 'center';
-                    removeBtn.style.justifyContent = 'center';
-                    removeBtn.style.cursor = 'pointer';
-                    removeBtn.style.fontSize = '14px';
-                    removeBtn.style.zIndex = '10';
-                    removeBtn.onclick = function(e) {
-                        e.stopPropagation();
-                        removePhoto(photoCard, imgId, inputElement);
-                    };
-                    
-                    photoFrame.appendChild(removeBtn);
-                }
+                    // Show success
+                    showMessage(`Photo ${photoNumber} uploaded! ✨`);
+                };
                 
                 reader.readAsDataURL(file);
             }
         }
         
-        // Function to remove photo
-        function removePhoto(photoCard, imgId, inputElement) {
-            const photoFrame = photoCard.querySelector('.photo-frame');
-            const imgElement = photoCard.querySelector('#' + imgId);
+        // Display photo in frame
+        function displayPhoto(photoNumber, imageData) {
+            const frame = document.getElementById(`frame${photoNumber}`);
             
-            // Reset the frame
-            photoFrame.innerHTML = '';
-            photoFrame.innerHTML = '<div class="upload-icon">📸</div><div class="upload-text">Click to add photo</div>';
+            // Create img element
+            const img = document.createElement('img');
+            img.src = imageData;
+            img.style.width = '100%';
+            img.style.height = '100%';
+            img.style.objectFit = 'cover';
             
-            // Hide the image
-            imgElement.src = '';
-            imgElement.style.display = 'none';
-            
-            // Reset the file input
-            inputElement.value = '';
-            
-            // Remove photo-added class
-            photoFrame.classList.remove('photo-added');
-            
-            // Add click event back
-            photoFrame.onclick = function() {
-                inputElement.click();
-            };
+            // Clear frame and add image
+            frame.innerHTML = '';
+            frame.appendChild(img);
         }
         
-        // Function to reset all photos
-        function resetAllPhotos() {
-            // Reset each photo card
+        // Save to localStorage
+        function saveToLocalStorage() {
+            let savedCount = 0;
+            
             for (let i = 1; i <= 4; i++) {
-                const photoCard = document.getElementById(`card${i}`);
-                const photoFrame = photoCard.querySelector('.photo-frame');
-                const imgElement = photoCard.querySelector(`#img${i}`);
-                const inputElement = photoCard.querySelector(`#file${i}`);
-                
-                // Reset the frame
-                photoFrame.innerHTML = '';
-                photoFrame.innerHTML = '<div class="upload-icon">📸</div><div class="upload-text">Click to add photo</div>';
-                
-                // Hide the image
-                imgElement.src = '';
-                imgElement.style.display = 'none';
-                
-                // Reset the file input
-                inputElement.value = '';
-                
-                // Remove photo-added class
-                photoFrame.classList.remove('photo-added');
-                
-                // Add click event back
-                photoFrame.onclick = function() {
-                    inputElement.click();
-                };
-            }
-        }
-        
-        // Make sure frames are clickable
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize all frames with click handlers
-            for (let i = 1; i <= 4; i++) {
-                const inputElement = document.getElementById(`file${i}`);
-                const photoFrame = document.querySelector(`#card${i} .photo-frame`);
-                
-                if (photoFrame && inputElement) {
-                    photoFrame.onclick = function() {
-                        inputElement.click();
-                    };
+                if (photos[i]) {
+                    localStorage.setItem(`rekha_photo_${i}`, photos[i]);
+                    savedCount++;
                 }
             }
+            
+            if (savedCount > 0) {
+                showMessage(`✅ ${savedCount} photos saved! They will stay here forever!`);
+            } else {
+                showMessage('No photos to save. Upload some photos first!');
+            }
+        }
+        
+        // Load from localStorage
+        function loadFromLocalStorage() {
+            let loadedCount = 0;
+            
+            for (let i = 1; i <= 4; i++) {
+                const savedPhoto = localStorage.getItem(`rekha_photo_${i}`);
+                if (savedPhoto) {
+                    displayPhoto(i, savedPhoto);
+                    photos[i] = savedPhoto;
+                    loadedCount++;
+                }
+            }
+            
+            if (loadedCount > 0) {
+                showMessage(`📂 Loaded ${loadedCount} saved photos!`);
+            } else {
+                showMessage('No saved photos found. Upload some photos first!');
+            }
+        }
+        
+        // Remove photo
+        function removePhoto(photoNumber) {
+            const frame = document.getElementById(`frame${photoNumber}`);
+            
+            // Reset to placeholder
+            frame.innerHTML = `
+                <div class="photo-placeholder">
+                    <div class="placeholder-icon">📸</div>
+                    <div class="placeholder-text">Your photo here</div>
+                </div>
+            `;
+            
+            // Remove from storage
+            photos[photoNumber] = null;
+            localStorage.removeItem(`rekha_photo_${photoNumber}`);
+            
+            showMessage(`Photo ${photoNumber} removed`);
+        }
+        
+        // Show success message
+        function showMessage(text) {
+            const messageArea = document.getElementById('successMessage');
+            messageArea.innerHTML = `
+                <div class="success-message">
+                    ${text}
+                </div>
+            `;
+            
+            // Auto hide after 3 seconds
+            setTimeout(() => {
+                messageArea.innerHTML = '';
+            }, 3000);
+        }
+        
+        // Add click handlers for photo cards to remove photos
+        document.querySelectorAll('.photo-card').forEach((card, index) => {
+            card.addEventListener('dblclick', function() {
+                if (photos[index + 1]) {
+                    if (confirm('Remove this photo?')) {
+                        removePhoto(index + 1);
+                    }
+                }
+            });
         });
+        
+        // Add tooltip
+        const style = document.createElement('style');
+        style.innerHTML = `
+            .photo-card {
+                cursor: pointer;
+            }
+            .photo-card:hover {
+                opacity: 0.9;
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
